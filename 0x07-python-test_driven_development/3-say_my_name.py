@@ -1,17 +1,31 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""
+This module have a function that prints My name is <first name> <last name>
+prototype: def say_my_name(first_name, last_name=""):
+
+"""
+
+
 def say_my_name(first_name, last_name=""):
-    """Prints 'My name is <first_name> <last_name>'.
+    """ function that prints My name is <first name> <last name>
+
+    first_name and last_name must be strings otherwise,
+    raise a TypeError exception with the message first_name must be a string
+    or last_name must be a string
+    Do not allowed to import any module
 
     Args:
-        first_name (str): The first name.
-        last_name (str, optional): The last name. Defaults to "".
+        first name: first parameter
+        lasta name: second parameter
 
     Raises:
-        TypeError: If either first_name or last_name is not a string.
-    """
-    if not isinstance(first_name, str):
-        raise TypeError("first_name must be a string")
-    if not isinstance(last_name, str):
-        raise TypeError("last_name must be a string")
+        TypeError: first_name must be a string
+        TypeError: last_name must be a string
 
-    full_name = f"My name is {first_name} {last_name}"
-    print(full_name)
+    """
+    if type(first_name) is not str:
+        raise TypeError('first_name must be a string')
+    if type(last_name) is not str:
+        raise TypeError('last_name must be a string')
+    print("My name is {} {}".format(first_name, last_name))
