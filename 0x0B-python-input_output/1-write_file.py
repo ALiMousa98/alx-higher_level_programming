@@ -6,6 +6,4 @@
 def write_file(filename="", text=""):
     """Return the char numbers of the contents of a UTF8 text file"""
     with open(filename, 'w', encoding='utf-8') as file:
-        file.write(text)
-
-    return text
+        return file.write(text)
