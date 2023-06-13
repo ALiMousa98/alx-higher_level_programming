@@ -13,7 +13,7 @@
     """
 
 
-def append_file(filename="", text=""):
+def append_write(filename="", text=""):
     """Return the char numbers of the contents of a UTF8 text file"""
     with open(filename, 'a', encoding='utf-8') as file:
         return file.write(text)
